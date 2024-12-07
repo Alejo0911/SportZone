@@ -1,0 +1,199 @@
+/* Estilos globales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('/Image/istockphoto-949190756-170667a.jpg'); 
+  background-size: cover; 
+  background-position: center center; 
+  background-attachment: fixed; 
+  color: #fff; 
+  overflow-x: hidden;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffbf00;
+}
+
+/* Estilo del contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Barra de navegación */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00ffcc;
+  transform: scale(1.1);
+}
+
+/* Títulos */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 5s ease infinite;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Contenedor del precio original */
+.precio-original {
+  font-size: 1.2rem;
+  color: #000; 
+  text-decoration: line-through; 
+  margin: 10px 0;
+}
+
+/* Botón principal */
+button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255, 117, 140, 0.3);
+}
+
+/* Animaciones suaves para los elementos de entrada */
+button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Transiciones al cargar */
+.container > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.container > *:nth-child(1) { animation-delay: 0.2s; }
+.container > *:nth-child(2) { animation-delay: 0.4s; }
+.container > *:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para la lista */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%; 
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+/* Contenedor de las tarjeta */
+.product-card {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #1c1c1c; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+/* Efecto de zoom y sombra al pasar el ratón */
+.product-card:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
+}
+
+/* Estilo de la imagen */
+.movie-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
+  border-radius: 8px; 
+  transition: transform 0.3s ease; 
+}
+
+/* Efecto de zoom en la imagen */
+.product-card:hover .movie-image {
+  transform: scale(1.1); 
+}
+
+/* Título de la imagen */
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* Estilo para el texto */
+.product-card p {
+  font-size: 1rem;
+  color: #bbb;
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+
